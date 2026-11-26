@@ -1,0 +1,28 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.skills {
+  @include container;
+  padding-bottom: 96px;
+
+  &__grid {
+    @include auto-grid(240px);
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  &__card {
+    @include card;
+    padding: 28px;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__text {
+    margin-top: 12px;
+    color: $color-text;
+  }
+}

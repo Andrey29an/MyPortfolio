@@ -1,0 +1,59 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.project {
+  @include container;
+  padding-bottom: 96px;
+
+  &__card {
+    @include card;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 32px;
+    padding: 40px;
+    border-radius: $radius-lg;
+
+    @media (max-width: 480px) {
+      padding: 28px;
+    }
+  }
+
+  &__info,
+  &__list {
+    flex: 1 1 320px;
+    min-width: 0;
+  }
+
+  &__meta {
+    font-size: 14px;
+    color: $color-muted;
+  }
+
+  &__title {
+    margin-top: 8px;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-top: 12px;
+    color: $color-text;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 24px;
+    font-weight: 500;
+  }
+
+  &__list {
+    margin: 0;
+    padding-left: 20px;
+    color: $color-text;
+
+    li {
+      margin-bottom: 12px;
+    }
+  }
+}

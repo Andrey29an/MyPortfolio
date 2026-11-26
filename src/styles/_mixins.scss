@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+@mixin auto-grid($min) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min, 1fr));
+}
+
+@mixin card {
+  background: $color-white;
+  border: 1px solid $color-line;
+  border-radius: $radius;
+}

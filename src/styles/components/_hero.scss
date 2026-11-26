@@ -1,0 +1,74 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.hero {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 56px;
+  padding-top: 48px;
+  padding-bottom: 96px;
+
+  &__content {
+    flex: 999 1 460px;
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-accent;
+  }
+
+  &__title {
+    font-size: clamp(44px, 7vw, 80px);
+    line-height: 1.02;
+    font-weight: 700;
+  }
+
+  &__subtitle {
+    margin-top: 20px;
+    font-family: $font-heading;
+    font-size: 22px;
+    font-weight: 500;
+    color: $color-muted;
+  }
+
+  &__text {
+    max-width: 600px;
+    margin-top: 24px;
+    font-size: 18px;
+    color: $color-text;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  &__photo {
+    flex: 0 1 300px;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 3 / 4;
+    border-radius: $radius;
+    object-fit: cover;
+
+    &--empty {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: $color-accent-soft;
+      color: $color-photo-text;
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+}

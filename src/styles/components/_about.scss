@@ -1,0 +1,24 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.about {
+  @include container;
+  @include auto-grid(280px);
+  gap: 48px;
+  padding-bottom: 96px;
+
+  &__main {
+    margin-top: 24px;
+    font-weight: 600;
+  }
+
+  &__note {
+    margin-top: 8px;
+    color: $color-muted;
+
+    &--bold {
+      color: inherit;
+      font-weight: 600;
+    }
+  }
+}

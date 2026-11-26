@@ -1,0 +1,42 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.header {
+  @include container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  &__logo {
+    font-family: $font-heading;
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-ink;
+    text-decoration: none;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 24px;
+  }
+
+  &__link {
+    font-size: 15px;
+    color: $color-ink;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

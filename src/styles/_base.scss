@@ -1,0 +1,84 @@
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: $color-bg;
+  color: $color-ink;
+  font-family: $font-base;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: $font-heading;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: $color-accent;
+
+  &:hover {
+    color: $color-accent-dark;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+
+  &--primary {
+    background: $color-accent;
+    color: $color-white;
+
+    &:hover {
+      background: $color-accent-dark;
+      color: $color-white;
+    }
+  }
+
+  &--outline {
+    border: 1px solid $color-ink;
+    color: $color-ink;
+
+    &:hover {
+      background: $color-ink;
+      color: $color-bg;
+    }
+  }
+
+  &--small {
+    padding: 10px 18px;
+    font-size: 15px;
+  }
+}
