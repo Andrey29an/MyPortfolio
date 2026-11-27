@@ -12,7 +12,7 @@ export default function About() {
       <div>
         <h2 className="section-title">Languages</h2>
         <p className="about__main">Ukrainian: native</p>
-        <p className="about__note about__note--bold">English: A2, improving</p>
+        <p className="about__note about__note--bold">English: A2</p>
       </div>
     </section>
   )
