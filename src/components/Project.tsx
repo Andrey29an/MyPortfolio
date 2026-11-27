@@ -5,26 +5,27 @@ export default function Project() {
 
   return (
     <section id="project" className="project">
-      <h2 className="section-title">Selected project</h2>
+      <p className="eyebrow eyebrow--flush">{project.eyebrow}</p>
+      <h2 className="section-title project__title">
+        {project.titleLines[0]}
+        <br />
+        {project.titleLines[1]}
+      </h2>
 
-      <article className="project__card">
-        <div className="project__info">
-          <p className="project__meta">
-            {project.period} · {project.role}
-          </p>
-          <h3 className="project__title">{project.title}</h3>
-          <p className="project__text">{project.description}</p>
+      <div className="project__body">
+        <div className="project__col">
+          <p className="lead">{project.description}</p>
           <a href={project.url} target="_blank" rel="noreferrer" className="project__link">
-            Visit {domain} →
+            {domain} →
           </a>
         </div>
 
-        <ul className="project__list">
+        <ul className="project__col project__list">
           {project.highlights.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
-      </article>
+      </div>
     </section>
   )
 }

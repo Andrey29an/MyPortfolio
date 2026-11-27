@@ -1,10 +1,10 @@
-import { navLinks } from '../data'
+import { navLinks, profile } from '../data'
 
 export default function Header() {
   return (
     <header className="header">
       <a href="#top" aria-label="Back to top" className="header__logo">
-        AM<span>.</span>
+        {profile.logo}
       </a>
 
       <nav className="header__nav">
@@ -13,9 +13,6 @@ export default function Header() {
             {link.label}
           </a>
         ))}
-        <a href="#contact" className="btn btn--primary btn--small">
-          Contact
-        </a>
       </nav>
     </header>
   )

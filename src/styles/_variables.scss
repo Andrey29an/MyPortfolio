@@ -1,21 +1,13 @@
-$color-bg: #f5f2ec;
-$color-ink: #1b1f1e;
-$color-text: #3a4442;
-$color-muted: #55605d;
-$color-line: #d9d4c9;
-$color-white: #fff;
-$color-accent: #1d6b66;
-$color-accent-dark: #124a46;
-$color-accent-soft: #d5e8e4;
-$color-accent-light: #9fd3cb;
-$color-photo-text: #1d4f4b;
-$color-footer-note: #9c9789;
+$color-paper: #f2eee4;
+$color-ink: #1a1a1a;
+$color-pink: #ff48b0;
+$color-blue: #0078bf;
+$color-blue-light: #6ec1ff;
 
-$font-base: Inter, system-ui, sans-serif;
-$font-heading: 'Space Grotesk', Inter, sans-serif;
+$font-base: Archivo, Inter, system-ui, sans-serif;
+$font-heading: 'Archivo Black', Archivo, sans-serif;
 
-$container-width: 1120px;
-$container-padding: 32px;
-$radius: 12px;
-$radius-lg: 16px;
-$color-orange: #ff8800;
+$container-width: 1200px;
+$container-padding: 40px;
+$container-padding-mobile: 20px;
+$bp-mobile: 640px;
