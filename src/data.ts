@@ -30,7 +30,7 @@ export const skills: { title: string; color: SkillColor; tags: SkillTag[] }[] = 
   {
     title: 'Frameworks',
     color: 'blue',
-    tags: ['Svelte', 'SvelteKit', { name: 'React (learning)', outline: true }],
+    tags: ['React', 'Svelte'],
   },
   { title: 'Responsive', color: 'light', tags: ['Mobile-first', 'Cross-browser', 'Responsive layouts'] },
   { title: 'Tools', color: 'pink', tags: ['Git', 'GitHub', 'Node.js', 'Prisma'] },
