@@ -2,27 +2,89 @@
 @use '../mixins' as *;
 
 .skills {
-  @include container;
-  padding-bottom: 96px;
+  background: $color-accent;
+  color: $color-white;
+  padding: 80px 0;
+  margin-bottom: 96px;
 
-  &__grid {
-    @include auto-grid(240px);
-    gap: 20px;
-    margin-top: 32px;
+  &__inner {
+    @include container;
   }
 
-  &__card {
-    @include card;
-    padding: 28px;
+  &__eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-accent-light;
+    margin-bottom: 8px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 40px 0 0;
+    padding: 0;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 72px 260px 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 0;
+    border-top: 1px solid rgba($color-white, 0.15);
+
+    &:last-child {
+      border-bottom: 1px solid rgba($color-white, 0.15);
+    }
+
+    @media (max-width: 700px) {
+      grid-template-columns: 48px 1fr;
+      gap: 12px 16px;
+
+      .skills__tags {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+
+  &__num {
+    font-family: $font-heading;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+    color: rgba($color-white, 0.5);
   }
 
   &__name {
     font-size: 20px;
     font-weight: 600;
+    line-height: 1.3;
   }
 
-  &__text {
-    margin-top: 12px;
-    color: $color-text;
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__tag {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    line-height: 1.4;
+    background: $color-white;
+    color: $color-accent-dark;
+    font-weight: 600;
+    cursor: default;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover {
+      background: $color-orange;
+      color: $color-white;
+    }
   }
 }

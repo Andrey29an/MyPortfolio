@@ -21,22 +21,29 @@ export const navLinks = [
   { href: '#about', label: 'About' },
 ]
 
-export const skills = [
+export type SkillTag = string | { name: string; accent: boolean }
+
+export const skills: { title: string; tags: SkillTag[] }[] = [
   {
     title: 'Core languages',
-    text: 'JavaScript (ES6+), TypeScript, HTML5, CSS3 and SCSS (Sass)',
+    tags: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'SCSS (Sass)'],
   },
   {
     title: 'Frameworks',
-    text: 'Svelte and SvelteKit (hands-on), React (learning), Tailwind CSS',
+    tags: [
+      { name: 'Svelte', accent: true },
+      { name: 'SvelteKit', accent: true },
+      'React (learning)',
+      'Tailwind CSS',
+    ],
   },
   {
     title: 'Responsive design',
-    text: 'Mobile-first layouts that work across browsers and screen sizes',
+    tags: ['Mobile-first', 'Cross-browser', 'Responsive layouts'],
   },
   {
     title: 'Tools and back end',
-    text: 'Git and GitHub, Node.js, Prisma',
+    tags: ['Git', 'GitHub', 'Node.js', 'Prisma'],
   },
 ]
 
